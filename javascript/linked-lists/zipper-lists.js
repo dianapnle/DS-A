@@ -33,7 +33,8 @@ class Node {
     if (current2 !== null) tail.next = current2;
     return head1;
   };
-
+//Time: O(min(n,m))
+//Space: O(1) no new nodes
 
   //recursive
 
