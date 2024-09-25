@@ -20,7 +20,8 @@ class Node {
       let current = stack.pop();
       res.push(current.val);
 
-      //only push children if they exist
+      //only push children if they exist, for depth you want to push right and then left if you want left to pop out first
+      //because the one that goes in first comes out later
       if (current.right) stack.push(current.right);
       if (current.left)  stack.push(current.left);
     }
