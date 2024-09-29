@@ -9,7 +9,7 @@ const hasPathRecursive = (graph, src, dst) => {
     return false
 }
 
-//time = O(n^2) and space = O(n)
+//time = O(n^2) / O(e) (number of edges) and space = O(n)
 
 
 const hasPathBreadth = (graph, src, dst) => {
@@ -27,4 +27,3 @@ const hasPathBreadth = (graph, src, dst) => {
   return false
 }
 //depth iterative is pop instead of shift
-
