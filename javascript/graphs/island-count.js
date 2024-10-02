@@ -37,3 +37,4 @@ const islandCount = (grid) => {
 
     return true;
   }
+//time and space is O(rc)
