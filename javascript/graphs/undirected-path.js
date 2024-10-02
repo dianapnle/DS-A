@@ -11,7 +11,7 @@ const buildGraph = (edges) =>  {
       if (!(a in graph)) graph[a] = [];
       if (!(b in graph)) graph[b] = [];
       //if it does exist in the graph
-      //since its undirected, a and be should be in each other's neighbors
+      //since its undirected, a and b should be in each other's neighbors
       graph[a].push(b);
       graph[b].push(a);
     }
