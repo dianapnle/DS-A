@@ -39,3 +39,5 @@ const shortestPath = (edges, nodeA, nodeB) => {
     }
     return graph
   }
+
+  //linear complexity O(n)
