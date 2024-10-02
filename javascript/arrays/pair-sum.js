@@ -46,3 +46,25 @@ const pairSum = (numbers, targetSum) => {
       }
     }
   };
+
+
+
+  ///neetcode solution with map that is technically faster and has more features
+  const twoSum = (nums, target) => {
+    const map = new Map();
+
+    for (let index = 0; index < nums.length; index++) {
+        const num = nums[index];
+        const complement = target - num;
+        const sumIndex = map.get(complement);
+
+        const isTarget = map.has(complement);
+        if (isTarget) {
+            return [index, sumIndex];
+        }
+
+        map.set(num, index);
+    }
+
+    return [-1, -1];
+}
