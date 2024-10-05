@@ -26,4 +26,4 @@ class Solution {
         return longest
     }
 }
-//time and space is O(n)
+//time and space is O(n) because loop array for time  and the set made from array for memory
