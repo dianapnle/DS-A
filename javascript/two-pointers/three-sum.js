@@ -32,7 +32,7 @@ class Solution {
                     l++;
                     //if found sum of 0 -> keep looking for other numbers after but keep incrementing if its the same value as prev
                     //cause u dont want duplicates
-                    if (nums[l] == nums[l - 1] && l < r) {
+                    while (nums[l] == nums[l - 1] && l < r) {
                         l++;
                     }
                 }
