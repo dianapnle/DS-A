@@ -30,8 +30,9 @@ class Solution {
                     //means it equals 0 so push the indices into the res
                     res.push([nums[i], nums[l], nums[r]]);
                     l++;
-                    //if found sum of 0 -> keep looking for other numbers
-                    while (nums[l] == nums[l - 1] && l < r) {
+                    //if found sum of 0 -> keep looking for other numbers after but keep incrementing if its the same value as prev
+                    //cause u dont want duplicates
+                    if (nums[l] == nums[l - 1] && l < r) {
                         l++;
                     }
                 }
