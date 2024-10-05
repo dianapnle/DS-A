@@ -17,14 +17,15 @@ class Solution {
     }
 
     alphaNum(s) {
-        let alphabet = new Set(["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"])
+        let alphabet = new Set(["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4", "5",
+            "6", "7", "8", "9"])
         if (alphabet.has(s)) {
             return true
         }
 
 }
 
-
+}
 
 class Solution {
     /**
@@ -33,7 +34,7 @@ class Solution {
      */
     isPalindrome(s) {
         //only take the alphanumeric characters, convert to lower case, walk the string
-        //2 with built in functions
+        //2 with no extra memory, uses less memory
         let res = "";
         for (let char of s) {
             if (this.alphaNum(char.toLowerCase())) {
@@ -45,7 +46,8 @@ class Solution {
     }
 
     alphaNum(s) {
-        let alphabet = "abcdefhijklmnopqrstuvwxyz";
+        let alphabet = new Set(["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4", "5",
+            "6", "7", "8", "9"])
         if (alphabet.includes(s)) {
             return true
         }
