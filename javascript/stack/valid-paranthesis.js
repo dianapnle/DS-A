@@ -38,12 +38,12 @@ class Solution {
                 //if a opening paranthesis, simply push to stack
                 stack.push(char)
             } else {
-                //its a closing paranthesis so have to check if its last one matches
+                //its a closing paranthesis so have to check if its last one is a matching open
                 //if stack length is empty or
                 if (stack.length === 0 ||
-                    (char === "(" && stack[stack.length - 1] !== ")") ||
-                    (char === "[" && stack[stack.length - 1] !== "]") ||
-                    (char === "{" && stack[stack.length - 1] !== "}")) {
+                    (char === ")" && stack[stack.length - 1] !== "(") ||
+                    (char === "]" && stack[stack.length - 1] !== "[") ||
+                    (char === "}" && stack[stack.length - 1] !== "{")) {
                         return false
                     }
                     //else if it does match, pop
