@@ -39,7 +39,7 @@ class Solution {
                 stack.push(char)
             } else {
                 //its a closing paranthesis so have to check if its last one is a matching open
-                //if stack length is empty or
+                //If it is empty, return false, because the closing bracket does not have a corresponding opening bracket.
                 if (stack.length === 0 ||
                     (char === ")" && stack[stack.length - 1] !== "(") ||
                     (char === "]" && stack[stack.length - 1] !== "[") ||
