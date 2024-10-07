@@ -28,3 +28,35 @@ class Solution {
     }
 }
 //time is O(n^&2) and O(n) memory
+
+//second solution
+class Solution {
+    /**
+     * @param {number} n
+     * @return {string[]}
+     */
+    generateParenthesis(n) {
+        let res = [];
+        this.backTrack(n, 0, 0, res, "")
+        return res
+    }
+
+    backTrack(n, openN, closedN, res, current) {
+        //base case when number of paranthesis are reached and n is reached
+        if (openN == closedN && openN + closedN === n * 2) {
+            res.push(current);
+            return
+        }
+
+        //if openN < n, add an open paranthesis to the current string
+        if (openN < n) {
+            this.backTrack(n, openN + 1, closedN, res, current + "(")
+        }
+
+        //if closedN < openN then add a closed paranthesis
+        if (closedN < openN) {
+            this.backTrack(n, openN, closedN + 1, res, current + ")")
+        }
+    }
+}
+
