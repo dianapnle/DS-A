@@ -36,3 +36,35 @@ class Node {
 
 
   //timeand space : O(n)
+
+
+
+  /**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     constructor(val = 0, next = null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+
+class Solution {
+  /**
+   * @param {ListNode} head
+   * @return {ListNode}
+   */
+  reverseList(head) {
+      let [prev, curr, next] = [null, head,  null];
+      while (curr !== null) {
+          //save variable
+          next = curr.next;
+          //point to prev
+          curr.next = prev;
+          //shift the variables over to the next node after
+          prev = curr;
+          curr = next;
+      }
+  return prev
+  }
+}
