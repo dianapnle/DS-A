@@ -16,14 +16,14 @@ class Solution {
         //if midRow[-1] aka last value of mid row is < target, move top down + 1
         while (top <= bot) {
             let mid = Math.floor((top + bot) / 2);
-            if (matrix[mid][0] < target && matrix[mid][lastCol] > target) {
-                break
-                //break the while loop
-            } else if (matrix[mid][0] > target) {
+            if (matrix[mid][0] > target) {
                 //move the bottom row up
                 bot = mid - 1
             } else if (matrix[mid][lastCol] < target) {
                 top = mid + 1
+            } else if (matrix[mid][0] <= target && matrix[mid][lastCol] >= target) {
+                break
+                //break the while loop
             }
         }
 
@@ -40,20 +40,20 @@ class Solution {
 
         while (l <= r) {
         //find each loop because midPoint between r and l will change as pointers move
-        let midPoint = l + Math.floor((r - l) / 2);
+        let midPoint = Math.floor((l + r) / 2);
 
-            if (matrix[row][midPoint] === target) {
-                return true
-            } else if (matrix[row][midPoint] > target) {
+            if (matrix[row][midPoint] > target) {
                 r = midPoint - 1
             } else if (matrix[row][midPoint] < target) {
                 l = midPoint + 1
+            } else if (matrix[row][midPoint] === target) {
+                return true
             }
-
         }
         return false
     }
 }
+
 
 
 //Time complexity: O(log(m) + log(n))
