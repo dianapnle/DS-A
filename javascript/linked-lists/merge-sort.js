@@ -60,3 +60,39 @@ const mergeListsRecursive = (head1, head2) => {
     }
 
 }
+
+
+
+
+
+/////////////////
+class Solution {
+  /**
+   * @param {ListNode} list1
+   * @param {ListNode} list2
+   * @return {ListNode}
+   */
+  mergeTwoLists(list1, list2) {
+      //create a dummy new head for output
+      //set tail of output to point to same one
+      let newhead = { val: 0, next: null };
+      //or let newhead = new ListNode(null)
+      let tail = newhead;
+
+      while(list1 !== null && list2!== null) {
+          if (list1.val < list2.val) {
+              //move to next node
+              tail.next = list1;
+              list1 = list1.next;
+          } else {
+              tail.next = list2;
+              list2 = list2.next
+          }
+          tail = tail.next;
+      }
+      //once one of the tails is exhausted,  the loop will exit and set the rest of the non null list
+      if (list1 !== null) tail.next = list1;
+      if (list2 !== null) tail.next = list2;
+      return newhead.next
+  }
+}
