@@ -27,8 +27,8 @@ class Solution {
     dfs(root, res) {
         if (root === null) return 0;
     // Recursively calculate the diameter of left and right subtrees
-        let left = this.dfs(root.left);
-        let right = this.dfs(root.right);
+        let left = this.dfs(root.left, res);
+        let right = this.dfs(root.right, res);
     //update the maximum diameter encountered so far
         res[0] = Math.max(res[0], left + right);
     //return the height of the current node
