@@ -24,6 +24,7 @@ var gcdOfStrings = function(str1, str2) {
             return str1.slice(0, i)
         }
     }
+    //if the loop is done, no substring was found that is a factor in both strings so return empty string
     return ""
 };
 
