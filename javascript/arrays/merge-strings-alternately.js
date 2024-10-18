@@ -41,3 +41,4 @@ var mergeAlternately = function(word1, word2) {
     //will exit loop if word1 or word2 gets exhausted, simply push rest
     return res;
 };
+//time is O(n)
