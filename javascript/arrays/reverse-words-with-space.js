@@ -20,3 +20,5 @@ var reverseWords = function(s) {
 
     return res.join(" ")
 };
+
+//O(n) time and space
