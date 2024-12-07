@@ -14,6 +14,3 @@ const pairProduct = (numbers, targetProduct) => {
 //   n = length of array
 //   Time: O(n)
 //   Space: O(n)
-
-
-//
