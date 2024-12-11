@@ -10,27 +10,24 @@ var addTwoNumbers = function(l1, l2) {
     let tail = dummyhead;
 
     let carry = 0;
-    let current1 = l1;
-    let current2 = l2;
 
-    while (current1 !== null || current2 !== null || carry === 1) {
-        //if something is null substitute a 0 for its value
-        let val1 = current1 !== null ? current1.val : 0;
-        let val2 = current2 !== null ? current2.val : 0;
+    while (l1 !== null || l2 !== null || carry == 1) {
+        //if l1 or l1 value is null -> set to 0 or use val
+        let val1 = (l1 === null) ? 0 : l1.val;
+        let val2 = (l2 === null) ? 0 : l2.val;
         let sum = val1 + val2 + carry;
-        //if sum is double digit -> reset the carry
-        carry =  sum > 9 ? 1 : 0;
-        let digit = sum % 10;
 
-        tail.next = new ListNode(digit);
-        //traverse the output
+        //if sum is over 9 -> reset the carry
+        carry = sum > 9 ? 1 : 0;
+        //set the result tail.next to the sum % 10
+        tail.next = new ListNode(sum % 10);
+        // traverse the output to not overwrite
         tail = tail.next;
 
-        //traverse if not null
-        if (current1 !== null) current1 = current1.next;
-        if (current2 !== null) current2 = current2.next;
+        //traverse the l1 and l2 lists if not null
+        if (l1 !== null) l1 = l1.next;
+        if (l2 !== null) l2 = l2.next;
     }
-
     return dummyhead.next;
 
 };
