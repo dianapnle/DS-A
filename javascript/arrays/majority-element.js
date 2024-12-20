@@ -22,3 +22,5 @@ var majorityElement = function(nums) {
     }
     return 0;
 };
+
+//time and space are O(n)
