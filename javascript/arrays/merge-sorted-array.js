@@ -26,4 +26,4 @@ var merge = function(nums1, m, nums2, n) {
     };
     return nums1
 };
-//time = O(n) space is O(1)
+//time = O(n), space is O(1)
