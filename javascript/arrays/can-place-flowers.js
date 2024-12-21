@@ -15,4 +15,4 @@ var canPlaceFlowers = function(flowerbed, n) {
     return n <= 0
 }
 
-//time is O(n)
+//time is O(n), space is o(n)
