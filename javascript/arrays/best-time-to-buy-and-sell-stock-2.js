@@ -45,3 +45,5 @@ var calculate = function (prices, s) {
     }
     return max;
 };
+
+//time is O(n^2) and space is O(n)
