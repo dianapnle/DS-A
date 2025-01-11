@@ -27,3 +27,5 @@ var maxProfit = function (prices) {
     }
     return maxprofit;
 };
+
+//time is O(n) and space is O(1)
